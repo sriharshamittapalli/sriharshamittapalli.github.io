@@ -1,146 +1,144 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Harsha Mittapalli Portfolio</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-  </head>
-  <body class="is-preload">
-    <!-- Wrapper -->
-    <div id="wrapper" class="fade-in">
-      <!-- Intro -->
-      <div id="intro">
-        <h1>Sri Harsha Mittapalli</h1>
-        <p>Innovative Software Engineer passionate about technology.</p>
-        <ul class="actions">
-          <li>
-            <a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a>
-          </li>
-        </ul>
-      </div>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+        }
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        .skills, .experience, .projects, .education, .contact {
+            margin-bottom: 2rem;
+        }
+        .contact a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
 
-      <!-- Header -->
-      <header id="header">
-        <a href="index.html" class="logo">Portfolio</a>
-      </header>
+<header>
+    <h1>Sri Harsha Mittapalli</h1>
+    <p>Innovative Software Engineer passionate about technology</p>
+</header>
 
-      <!-- Nav -->
-      <nav id="nav">
-        <ul class="links">
-          <li class="active"><a href="index.html">About Me</a></li>
-        </ul>
-        <ul class="icons">
-          <li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-          <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-        </ul>
-      </nav>
+<nav>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+</nav>
 
-      <!-- Main -->
-      <div id="main">
-        <!-- Featured Post -->
-        <article class="post featured">
-          <header class="major">
-            <h2><a href="#">Sri Harsha Mittapalli</a></h2>
-            <p>I'm a passionate developer with expertise in full-stack development, blockchain technologies, and cloud computing.</p>
-          </header>
-          <a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
-          <ul class="actions special">
-            <li><a href="#" class="button large">Check out my work</a></li>
-          </ul>
-        </article>
-
-        <!-- Posts -->
-        <section class="posts">
-          <article>
-            <header>
-              <h2><a href="#">Experience</a></h2>
-            </header>
-            <p><strong>Graduate Teaching Assistant</strong> - Cleveland State University, Jan 2024 - Present</p>
-            <ul>
-              <li>Assisted more than 71 students in understanding algorithmic principles and architectural concepts.</li>
-              <li>Created strategies for configuring development environments, reducing technical issues.</li>
-            </ul>
-            <p><strong>Software Developer</strong> - Prowess Software Services, Sep 2021 - Dec 2022</p>
-            <ul>
-              <li>Designed and developed scalable web applications.</li>
-              <li>Implemented RESTful APIs and microservices architecture.</li>
-            </ul>
-            <ul class="actions special">
-              <li><a href="#" class="button">Read More</a></li>
-            </ul>
-          </article>
-
-          <article>
-            <header>
-              <h2><a href="#">Skills</a></h2>
-            </header>
-            <p>
-              <strong>Programming Languages:</strong> Java, Python, C, C++, JavaScript, TypeScript<br />
-              <strong>Web Technologies:</strong> HTML, CSS, Angular, React, Node.js<br />
-              <strong>Blockchain:</strong> Solidity, Smart Contracts, Ethereum, Bitcoin<br />
-              <strong>Cloud Platforms:</strong> AWS, Azure<br />
-              <strong>Databases:</strong> MySQL, MongoDB<br />
-              <strong>Tools:</strong> Git, Docker, Kubernetes
-            </p>
-          </article>
-
-          <article>
-            <header>
-              <h2><a href="#">Education</a></h2>
-            </header>
-            <p><strong>Cleveland State University</strong> - Master of Computer Science, CGPA: 3.74/4.0 (Expected Dec 2024)</p>
-            <p><strong>Mahatma Gandhi Institute of Technology</strong> - B.Tech in Information Technology</p>
-          </article>
-
-          <article>
-            <header>
-              <h2><a href="#">Projects</a></h2>
-            </header>
-            <p><strong>Environmental Monitoring System</strong></p>
-            <ul>
-              <li>Developed a solution using Arduino IDE to monitor environmental parameters with integrated sensors.</li>
-              <li>Integrated with a Python library for a web app, improving UI responsiveness, and ensured reliable data integrity on a cloud server.</li>
-              <li>Link to the project: <a href="https://ems-anytime.streamlit.app/">Environmental Monitoring System</a></li>
-            </ul>
-            <p><strong>Detection of Nutrients in Soil Using IoT</strong></p>
-            <ul>
-              <li>Created a project to detect soil nutrient levels, pH, moisture, and weather conditions for enhanced crop productivity.</li>
-              <li>Used Blynk’s Android app for remote monitoring, leading to a patent acquisition.</li>
-              <li>Patent Link: <a href="https://your-patent-link.com">Patent for Nutrient Detection in Soil</a></li>
-            </ul>
-          </article>
-        </section>
-      </div>
-
-      <!-- Footer -->
-      <footer id="footer">
-        <section class="split contact">
-          <section class="alt">
-            <h3>Contact</h3>
-            <p>Phone: +1(682) 233-4465</p>
-            <p>Email: <a href="mailto:harsha.mittapalli@outlook.com">harsha.mittapalli@outlook.com</a></p>
-          </section>
-        </section>
-      </footer>
-
-      <!-- Copyright -->
-      <div id="copyright">
+<div class="container">
+    <section id="skills" class="skills">
+        <h2 class="section-title">Skills</h2>
         <ul>
-          <li>&copy; Sri Harsha Mittapalli</li>
-          <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+            <li><strong>Programming Languages:</strong> Java, Python, C, C++, JavaScript, TypeScript</li>
+            <li><strong>Web Technologies:</strong> HTML, CSS, Angular, React, Node.js</li>
+            <li><strong>Blockchain:</strong> Solidity, Smart Contracts, Ethereum, Bitcoin</li>
+            <li><strong>Cloud Platforms:</strong> AWS, Azure</li>
+            <li><strong>Databases:</strong> MySQL, MongoDB</li>
+            <li><strong>Tools:</strong> Git, Docker, Kubernetes</li>
         </ul>
-      </div>
-    </div>
+    </section>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+    <section id="experience" class="experience">
+        <h2 class="section-title">Experience</h2>
+        <h3>Graduate Teaching Assistant - Cleveland State University (Jan 2024 - Present)</h3>
+        <ul>
+            <li>Assisted more than 71 students in understanding algorithmic principles and architectural concepts.</li>
+            <li>Created strategies for configuring development environments, reducing technical issues.</li>
+        </ul>
+        <h3>Software Developer - Prowess Software Services (Sep 2021 - Dec 2022)</h3>
+        <ul>
+            <li>Designed and developed scalable web applications.</li>
+            <li>Implemented RESTful APIs and microservices architecture.</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2 class="section-title">Projects</h2>
+        <h3>Environmental Monitoring System</h3>
+        <ul>
+            <li>Developed a solution using Arduino IDE to monitor environmental parameters with integrated sensors.</li>
+            <li>Integrated with a Python library for a web app, improving UI responsiveness, and ensured reliable data integrity on a cloud server.</li>
+            <li>Link to the project: <a href="https://ems-anytime.streamlit.app/" target="_blank">Environmental Monitoring System</a></li>
+        </ul>
+        <h3>Detection of Nutrients in Soil Using IoT</h3>
+        <ul>
+            <li>Created a project to detect soil nutrient levels, pH, moisture, and weather conditions for enhanced crop productivity.</li>
+            <li>Used Blynk’s Android app for remote monitoring, leading to a patent acquisition.</li>
+            <li>Patent Link: <a href="https://your-patent-link.com" target="_blank">Patent for Nutrient Detection in Soil</a></li>
+        </ul>
+    </section>
+
+    <section id="education" class="education">
+        <h2 class="section-title">Education</h2>
+        <p><strong>Cleveland State University</strong> - Master of Computer Science, CGPA: 3.74/4.0 (Expected Dec 2024)</p>
+        <p><strong>Mahatma Gandhi Institute of Technology</strong> - B.Tech in Information Technology</p>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact</h2>
+        <p><strong>Email:</strong> <a href="mailto:harsha.mittapalli@outlook.com">harsha.mittapalli@outlook.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sriharshamittapalli" target="_blank">linkedin.com/in/sriharshamittapalli</a></p>
+        <p><strong>GitHub:</strong> <a href="https://sriharshamittapalli.github.io" target="_blank">sriharshamittapalli.github.io</a></p>
+        <p><strong>Phone:</strong> +1(682) 233-4465</p>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Sri Harsha Mittapalli | Design by You</p>
+</footer>
+
+</body>
 </html>
