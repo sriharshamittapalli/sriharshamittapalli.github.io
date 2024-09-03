@@ -1,144 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Harsha Mittapalli Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
+        /* Base styles */
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --text-color: #333;
+            --bg-color: #f4f4f4;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-        }
-        nav a {
-            color: white;
-            padding: 14px 20px;
-            text-decoration: none;
-            text-align: center;
-        }
-        nav a:hover {
-            background-color: #ddd;
-            color: black;
         }
         .container {
-            padding: 20px;
-            max-width: 1000px;
+            width: 80%;
             margin: auto;
+            overflow: hidden;
+            padding: 0 20px;
         }
-        .section-title {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #4CAF50;
-            padding-bottom: 5px;
+        /* Header styles */
+        #header {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
         }
-        .skills, .experience, .projects, .education, .contact {
-            margin-bottom: 2rem;
+        #header .logo {
+            float: left;
+            font-size: 1.5em;
+            text-decoration: none;
+            color: #fff;
         }
-        .contact a {
-            color: #4CAF50;
+        #nav {
+            float: right;
+        }
+        #nav ul {
+            list-style: none;
+        }
+        #nav ul li {
+            display: inline;
+            padding: 0 20px;
+        }
+        #nav ul li a {
+            color: #fff;
             text-decoration: none;
         }
-        footer {
+        /* Intro styles */
+        #intro {
+            background: url('images/bg.jpg') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: white;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 0 20px;
+        }
+        #intro h1 {
+            font-size: 3em;
+            margin-bottom: 0;
+        }
+        #intro p {
+            font-size: 1.3em;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            background: var(--primary-color);
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: var(--accent-color);
+        }
+        /* Main content styles */
+        #main {
+            padding: 60px 0;
+        }
+        .post {
+            background: #fff;
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .post h2 {
+            color: var(--primary-color);
+        }
+        /* Skills styles */
+        .skills .skill {
+            margin-bottom: 20px;
+        }
+        .skills .skill span {
+            display: inline-block;
+            width: 100px;
+        }
+        .skills .progress-bar {
+            background-color: #ddd;
+            height: 10px;
+            width: calc(100% - 120px);
+            display: inline-block;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .skills .progress-bar .progress {
+            background-color: var(--primary-color);
+            height: 100%;
+        }
+        /* Footer styles */
+        #footer {
+            background: var(--secondary-color);
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+            #intro h1 {
+                font-size: 2em;
+            }
+            #nav {
+                float: none;
+                text-align: center;
+            }
+            #nav ul li {
+                padding: 0 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <header id="header">
+        <div class="container">
+            <a href="#" class="logo">Sri Harsha Mittapalli</a>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-<header>
-    <h1>Sri Harsha Mittapalli</h1>
-    <p>Innovative Software Engineer passionate about technology</p>
-</header>
-
-<nav>
-    <a href="#skills">Skills</a>
-    <a href="#experience">Experience</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<div class="container">
-    <section id="skills" class="skills">
-        <h2 class="section-title">Skills</h2>
-        <ul>
-            <li><strong>Programming Languages:</strong> Java, Python, C, C++, JavaScript, TypeScript</li>
-            <li><strong>Web Technologies:</strong> HTML, CSS, Angular, React, Node.js</li>
-            <li><strong>Blockchain:</strong> Solidity, Smart Contracts, Ethereum, Bitcoin</li>
-            <li><strong>Cloud Platforms:</strong> AWS, Azure</li>
-            <li><strong>Databases:</strong> MySQL, MongoDB</li>
-            <li><strong>Tools:</strong> Git, Docker, Kubernetes</li>
-        </ul>
+    <section id="intro">
+        <div class="container">
+            <h1>Sri Harsha Mittapalli</h1>
+            <p id="intro-text"></p>
+            <a href="#about" class="button">Learn More</a>
+        </div>
     </section>
 
-    <section id="experience" class="experience">
-        <h2 class="section-title">Experience</h2>
-        <h3>Graduate Teaching Assistant - Cleveland State University (Jan 2024 - Present)</h3>
-        <ul>
-            <li>Assisted more than 71 students in understanding algorithmic principles and architectural concepts.</li>
-            <li>Created strategies for configuring development environments, reducing technical issues.</li>
-        </ul>
-        <h3>Software Developer - Prowess Software Services (Sep 2021 - Dec 2022)</h3>
-        <ul>
-            <li>Designed and developed scalable web applications.</li>
-            <li>Implemented RESTful APIs and microservices architecture.</li>
-        </ul>
-    </section>
+    <main id="main">
+        <div class="container">
+            <section id="about" class="post fade-in">
+                <h2>About Me</h2>
+                <p>I'm a passionate developer with expertise in full-stack development, blockchain technologies, and cloud computing. Currently pursuing a Master's in Computer Science at Cleveland State University, I bring hands-on experience from my role as a Software Developer at Prowess Software Services.</p>
+            </section>
 
-    <section id="projects" class="projects">
-        <h2 class="section-title">Projects</h2>
-        <h3>Environmental Monitoring System</h3>
-        <ul>
-            <li>Developed a solution using Arduino IDE to monitor environmental parameters with integrated sensors.</li>
-            <li>Integrated with a Python library for a web app, improving UI responsiveness, and ensured reliable data integrity on a cloud server.</li>
-            <li>Link to the project: <a href="https://ems-anytime.streamlit.app/" target="_blank">Environmental Monitoring System</a></li>
-        </ul>
-        <h3>Detection of Nutrients in Soil Using IoT</h3>
-        <ul>
-            <li>Created a project to detect soil nutrient levels, pH, moisture, and weather conditions for enhanced crop productivity.</li>
-            <li>Used Blynk’s Android app for remote monitoring, leading to a patent acquisition.</li>
-            <li>Patent Link: <a href="https://your-patent-link.com" target="_blank">Patent for Nutrient Detection in Soil</a></li>
-        </ul>
-    </section>
+            <section id="experience" class="post fade-in">
+                <h2>Experience</h2>
+                <h3>Graduate Teaching Assistant - Cleveland State University</h3>
+                <p>Jan 2024 - Present</p>
+                <ul>
+                    <li>Assisted more than 71 students in understanding algorithmic principles and architectural concepts.</li>
+                    <li>Created strategies for configuring development environments, reducing technical issues.</li>
+                </ul>
+                <h3>Software Developer - Prowess Software Services</h3>
+                <p>Sep 2021 - Dec 2022</p>
+                <ul>
+                    <li>Designed and developed scalable web applications.</li>
+                    <li>Implemented RESTful APIs and microservices architecture.</li>
+                </ul>
+            </section>
 
-    <section id="education" class="education">
-        <h2 class="section-title">Education</h2>
-        <p><strong>Cleveland State University</strong> - Master of Computer Science, CGPA: 3.74/4.0 (Expected Dec 2024)</p>
-        <p><strong>Mahatma Gandhi Institute of Technology</strong> - B.Tech in Information Technology</p>
-    </section>
+            <section id="skills" class="post fade-in">
+                <h2>Skills</h2>
+                <div class="skills">
+                    <div class="skill">
+                        <span>Java</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 90%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Python</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 85%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>JavaScript</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Blockchain</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 75%;"></div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>AWS</span>
+                        <div class="progress-bar">
+                            <div class="progress" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-    <section id="contact" class="contact">
-        <h2 class="section-title">Contact</h2>
-        <p><strong>Email:</strong> <a href="mailto:harsha.mittapalli@outlook.com">harsha.mittapalli@outlook.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/sriharshamittapalli" target="_blank">linkedin.com/in/sriharshamittapalli</a></p>
-        <p><strong>GitHub:</strong> <a href="https://sriharshamittapalli.github.io" target="_blank">sriharshamittapalli.github.io</a></p>
-        <p><strong>Phone:</strong> +1(682) 233-4465</p>
-    </section>
-</div>
+            <section id="projects" class="post fade-in">
+                <h2>Projects</h2>
+                <h3>Environmental Monitoring System</h3>
+                <p>Developed a solution using Arduino IDE to monitor environmental parameters with integrated sensors. Integrated with a Python library for a web app, improving UI responsiveness, and ensured reliable data integrity on a cloud server.</p>
+                <a href="https://ems-anytime.streamlit.app/" class="button">View Project</a>
 
-<footer>
-    <p>&copy; 2024 Sri Harsha Mittapalli | Design by You</p>
-</footer>
+                <h3>Detection of Nutrients in Soil Using IoT</h3>
+                <p>Created a project to detect soil nutrient levels, pH, moisture, and weather conditions for enhanced crop productivity. Used Blynk's Android app for remote monitoring, leading to a patent acquisition.</p>
+                <a href="#" class="button">View Patent</a>
+            </section>
 
+            <section id="contact" class="post fade-in">
+                <h2>Contact Me</h2>
+                <form id="contact-form">
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div>
+                        <label for="message">Message:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="button">Send Message</button>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="container">
+            <p>© 2024 Sri Harsha Mittapalli. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Typewriter effect
+        const text = "Innovative Software Engineer passionate about technology.";
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("intro-text").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50);
+            }
+        }
+        window.onload = typeWriter;
+
+        // Form submission (you'll need to implement the backend for this)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Here you would typically send the form data to a server
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+    </script>
 </body>
 </html>
